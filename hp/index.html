@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Dancing+Script:wght@500&family=Great+Vibes&family=Pacifico&family=Parisienne&family=Satisfy&display=swap');
+#home{
+    background-image: url(back.jfif);
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+}
+section{
+  min-height: 100vh;
+}
+.about{
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.about .container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+    height: 80%;
+  }
+
+  .content-section {
+    float: left;
+    width: 55%;
+  }
+
+  .image-section {
+    float: right;
+    width: 40%;
+  }
+
+  .image-section img {
+    margin-top: 28px;
+  }
+
+  .content-section .title {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: tomato;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .content-section .content p {
+    margin-top: 20px;
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 15px;
+  }
+
+  .content-section .social {
+    margin: 40px 40px;
+    display: inline-block;
+  }
+
+  .content-section .social i {
+    color: tomato;
+    font-size: 30px;
+    padding: 0 10px;
+  }
+
+  .content-section .social i:hover {
+    color: gray;
+  }
+.navbar-light .navbar-nav .nav-link{
+  color: gray;
+  font-family:'Dancing Script', cursive;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+  color: tomato;
+}
+.dropdown-item {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+    font-family:'Dancing Script', cursive;
+
+  }
+
+  .dropdown-item:hover {
+    font-size: 16px;
+    background-color: rgb(255, 134, 112);
+  }
+
+  .dropdown-item.active {
+    background-color: tomato;
+  }
+.products {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    
+  }
+  .products img {
+    width: 30vh;
+    height: 35vh;
+    border-radius: 15px;
+  }
+  h2{
+    font-size: 65px;
+  }
+ h1{
+    color: white;
+    text-shadow: 0 02px tomato;
+    font-family: 'Dancing Script', cursive;
+
+  }
+.shadow-lg{
+  color: tomato;
+}
+.navbar-light .navbar-brand{
+  color: tomato;
+  font-family: 'Dancing Script', cursive;
+}
+.contact-box {
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
+  }
+
+  .left {
+    background: url("contact.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+  }
+
+  .right {
+    padding: 25px 40px;
+  }
+
+  h5 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+  }
+
+  h5:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 90px;
+    border-radius: 6px;
+    background-color: tomato;
+  }
+
+  .field {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+  }
+
+  .field:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  .btn-1 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: tomato;
+    color: #151b25;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .btn-1:hover {
+    background-color: rgb(219, 35, 2);
+  }
+
+  .field:focus {
+    border: 2px solid tomato;
+    background-color: #fff;
+  }
+</style>
+    <title>FthBakery</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg  navbar-light">
+        <div class="container-fluid ms-5">
+          <a class="navbar-brand ms-1" href="#">Bakery-Shop</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About-Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#breads">Bread</a></li>
+                  <li><a class="dropdown-item" href="#cakes">Cakes</a></li>
+                  <li><a class="dropdown-item" href="#Juices">Juices</a></li>
+                  <li><a class="dropdown-item" href="#wedding">Wedding</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+        <section id="home">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-10 col-xd-12">
+                    <h1 class="text-center my-5 py-5">Bakery-Shop</h1>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <section id="about" class="about">
+          <div class="container">
+            <div class="col-lg-12  col-md-12 col-sm-12">
+              <div class="content-section">
+                <div class="title">
+                  <h1>About-Us</h1>
+                </div>
+                <div class="content">
+                  <p>Welcome to Bakery Shop, where every juice is an experience, and every cake is an extra vaganza!
+                    Come see what people have been raving about, and try one for yourself.
+                    Every occasion deserves a Bakery Shop</p>
+                </div>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+              <div class="image-section">
+                <img src="/cake.jpg" alt="" style="height: 300px; width: 250px; border-radius:2px;"> 
+              </div>
+            </div>
+          </div>
+        </section>
+        <main class="products">
+        <section id="breads" class="breads">
+          <h2 class="shadow-lg p-3 mb-5 bg-body rounded">Breads</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/Bagel.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Bagel</h4>
+                <h3>dh20.00 </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/Bread laof  - Little Spice Jar.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Bread laof</h4>
+                <h3>dh20.00 </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/bread-2531902_1920.jpg" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Bread</h4>
+                <h3>1Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/Brioch.jpg" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Brioch</h4>
+                <h3>19Dh </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/Brown Bread Rolls.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Brown Bread</h4>
+                <h3>10Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/cinnamon-rolls-1417494_1920.jpg" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>cinnamon-rolls</h4>
+                <h3>20Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/How to make crumpets.png" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Crumpets</h4>
+                <h3>5Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="Breads/Pita.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Pita</h4>
+                <h3>2Dh </h3>
+              </div>
+    
+            </div>
+          </section>
+        <section class="cakes" id="Cakes">
+          <h2 class="shadow-lg p-3 mb-5 bg-body rounded" >Cakes</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/Banana Bundt Cake.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Banana Cake</h4>
+                <h3>200.00dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/cake with mandarin oranges.jpg" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Oranges cake</h4>
+                <h3>120Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/cake with strawberries and blueberries.jpg" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>strawberries cake</h4>
+                <h3>1800Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/Chocolate Coconut Cake.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Chocolate Coconut Cake</h4>
+                <h3>53Dh </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/lotus Cake.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Lotus Cake</h4>
+                <h3>dh20.00 </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/macaron cake.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Macaron Cake</h4>
+                <h3>dh20.00 </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/Lemon Cake.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Lemon Cake</h4>
+                <h3>dh20.00 </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="cakes/ice cream cone drip cake.jpg" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Ice cream Cake</h4>
+                <h3>dh20.00 </h3>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+        <section id="Juices" class="Juices">
+          <h2 class="shadow-lg p-3 mb-5 bg-body rounded">Juices</h2>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="jus/juice avocado.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>juice avocado</h4>
+                <h3>25Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="jus/orange.jfif" alt="">
+                <div class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Orange juice</h4>
+                <h3>15Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="jus//Peach.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Peach juice</h4>
+                <h3>25Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="jus/Mango Banana.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Mango juice</h4>
+    
+                <h3>20Dh </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="wedding" id="wedding">
+          <div class="container-fluid">
+            <div class="row">
+              <h2 class="shadow-lg p-3 mb-5 bg-body rounded">Wedding Cake</h2>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="wedding/purple wedding.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Purple wedding cake</h4>
+                <h3>300Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="wedding/Red Wedding Cake.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Red wedding cake</h4>
+                <h3>200Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="wedding/Yellow Wedding.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Yellow Wedding cake</h4>
+                <h3>500Dh </h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xd-12">
+                <img src="wedding/Dark Blue wedding Cake.jfif" alt="">
+                <div  class="d-flex justify-content-evenly">
+                  <i class="bi bi-cart"></i>
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4>Dark Blue wedding cake</h4>
+                <h3>700Dh </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section class="contact">
+        <div class="container" id="Contact">
+          <div class="contact-box col-lg-10 col-md-12 col-xd-12">
+            <div class="left"></div>
+            <div class="right">
+              <h5>Contact Us</h5>
+              <input type="text" class="field" placeholder="Your Name">
+              <input type="text" class="field" placeholder="Your Email">
+              <input type="text" class="field" placeholder="Phone">
+              <textarea placeholder="Message" class="field"></textarea>
+              <button class="btn-1">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
